@@ -1,0 +1,127 @@
+#NFPA 704
+import time
+
+
+print("there will be three prompted questions to determine the hazards of the \ncompound/solution, each will be prompted below")
+
+time.sleep(1)
+print("\nflammability (top red square)")
+time.sleep(1)
+print("\nhealth (blue left blue square)")
+time.sleep(1)
+print("\nand instability-reactivity (right yellow square)\n")
+
+time.sleep(1)
+
+while True:
+    try:
+       flam = int(input("what is the number for flammability?  "))
+    except ValueError:
+        print("Sorry, I didn't understand that.\n")
+        continue
+
+    if flam < 0:
+        print("Sorry, your response must not be negative.\n")
+        continue
+
+    if flam > 4:
+        print("Sorry, your response must not be above 4.\n")
+        continue
+    
+    else:
+        break
+
+while True:
+    try:
+       health = int(input("what is the number for health?  "))
+    except ValueError:
+        print("Sorry, I didn't understand that.\n")
+        continue
+
+    if health < 0:
+        print("Sorry, your response must not be negative.\n")
+        continue
+
+    if health > 4:
+        print("Sorry, your response must not be above 4.\n")
+        continue
+    
+    else:
+        break
+
+while True:
+    try:
+       inst = int(input("what is the number for instability-reactivity?  "))
+    except ValueError:
+        print("Sorry, I didn't understand that.\n")
+        continue
+
+    if inst < 0:
+        print("Sorry, your response must not be negative.\n")
+        continue
+
+    if inst > 4:
+        print("Sorry, your response must not be above 4.\n")
+        continue
+    
+    else:
+        break
+
+
+print("_________________________________________________________________________\n")
+
+
+print("flammability ranking = ", flam, "\n")
+
+if flam == 0:
+    print("Contains a material that will not burn under typical fire conditions")
+    
+if flam == 1:
+    print("Contains a material that will not burn under typical fire conditions")
+
+if flam == 2:
+    print("Contains a material that must be moderately heated or exposed \nto relatively high ambient temperature before ignition can occur")
+
+if flam == 3:
+    print("A liquid or solid (including finely divided suspended solids)\nthat can be ignited under almost all ambient temperature conditions.")
+
+if flam == 4:
+    print("A material that will rapidly or completely vaporize at normal atmospheric pressure\nand temperature, or is readily dispersed in air and will burn readily")
+
+
+print("\nhealth ranking = ", health)
+
+if health == 0:
+    print("\nPoses no health hazard, no precautions necessary and would offer no hazard\nbeyond that of ordinary combustible materials")
+    
+if health == 1:
+    print("\nExposure would cause irritation with only minor residual injury")
+
+if health == 2:
+    print("\nIntense or continued but not chronic exposure could cause\ntemporary incapacitation or possible residual injury")
+
+if health == 3:
+    print("\nShort exposure could cause serious temporary or moderate residual injury")
+
+if health == 4:
+    print("\nVery short exposure could cause death or major residual injury")
+
+
+print("\ninstability-reactivity ranking = ", inst)
+
+if inst == 0:
+    print("\nNormally stable, even under fire exposure conditions, and is not reactive with water")
+
+if inst == 1:
+    print("\nNormally stable, but can become unstable at elevated temperatures and pressures")
+
+if inst == 2:
+    print("\nUndergoes violent chemical change at elevated temperatures and\npressures, reacts violently with water, or may form explosive mixtures with water")
+
+if inst == 3:
+    print("\nCapable of detonation or explosive decomposition but requires a\nstrong initiating source, must be heated under confinement before initiation, \nreacts explosively with water, or will detonate if severely shocked")
+
+if inst == 4:
+    print("\nReadily capable of detonation or explosive decomposition at normal\ntemperatures and pressures")
+
+
